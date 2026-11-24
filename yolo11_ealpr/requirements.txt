@@ -1,0 +1,9 @@
+# Install PyTorch with CUDA first if you have an NVIDIA GPU (see pytorch.org),
+# then: pip install -r requirements.txt
+# Versions used for the reported results: ultralytics 8.4.183, torch 2.14.1+cu126,
+# Python 3.13.
+ultralytics>=8.4
+opencv-python
+pillow
+numpy
+matplotlib

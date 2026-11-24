@@ -1,0 +1,10 @@
+End-to-end pipeline evaluation - split: val
+post-processing: on
+
+vehicle photos evaluated: 295  (skipped 18 with no reference plate text)
+labelled plates: 301
+END-TO-END PLATE ACCURACY: 292/301 = 97.01%
+photos where no plate was found: 0
+plates read beyond the labelled ones (often unlabelled background plates): 13
+
+speed per photo (detect + read, GPU): mean 23.1 ms, median 22.0 ms  (~43 photos/s)

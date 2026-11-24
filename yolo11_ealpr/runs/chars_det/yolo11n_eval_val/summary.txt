@@ -1,0 +1,48 @@
+Character recognizer evaluation - split: val
+weights: runs\chars_det\yolo11n\weights\best.pt
+confidence threshold: 0.25
+
+plates: 301
+WHOLE-PLATE EXACT MATCH: 288/301 = 95.68%   (raw: sort + reverse letters only)
+  after post-processing:  290/301 = 96.35%   (alef/one fix, drop extras)
+
+labelled characters: 1697
+  CHARACTER ACCURACY: 1687/1697 = 99.41%
+  wrong class: 5   missed (no box): 5
+  extra boxes (no character there): 13
+
+Per character (accuracy = share of that character read correctly)
+   id char  count     acc  most often read as
+    0    أ     91 100.00%  
+    1    ب     33 100.00%  
+    2    ج     25 100.00%  
+    3    د     55  94.55%  missed x3
+    4    ر     47  97.87%  و x1
+    5    س     61  98.36%  ص x1
+    6    ص     17 100.00%  
+    7    ط     27 100.00%  
+    8    ع     48 100.00%  
+    9    ف     26 100.00%  
+   10    ق     45  97.78%  و x1
+   11    ل     38 100.00%  
+   12    م     94  97.87%  س x2
+   13    ن     42 100.00%  
+   14    ه     35 100.00%  
+   15    و     51 100.00%  
+   16    ى     33 100.00%  
+   17    ٠      0       -
+   18    ١    205  99.51%  missed x1
+   19    ٢     67 100.00%  
+   20    ٣     61 100.00%  
+   21    ٤    102 100.00%  
+   22    ٥     90 100.00%  
+   23    ٦    171 100.00%  
+   24    ٧    101  99.01%  missed x1
+   25    ٨     58 100.00%  
+   26    ٩     74 100.00%  
+
+Most common mix-ups (true -> predicted)
+  م -> س: 2
+  ر -> و: 1
+  س -> ص: 1
+  ق -> و: 1

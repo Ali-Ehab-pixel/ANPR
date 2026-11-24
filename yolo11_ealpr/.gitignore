@@ -1,0 +1,36 @@
+# ---- dataset and anything copied from it (not ours to redistribute) -------
+EALPR-master/
+prepared/
+demo_photos/
+# personal test photos of real cars / plates
+my_photos/
+
+# ---- pretrained weights: Ultralytics downloads these automatically --------
+/*.pt
+/weights/
+
+# ---- Python ----------------------------------------------------------------
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# ---- training outputs: keep only the final models and their metrics --------
+# trial runs
+runs/**/smoke_test*/
+# last-epoch weights (best.pt is the one that is used)
+runs/**/last.pt
+# Ultralytics' batch previews and annotated photos are dataset images
+runs/**/*.jpg
+runs/pipeline/annotated/
+runs/pipeline/demo/
+runs/pipeline/eval_*/failures/
+# long progress-bar logs
+runs/*_log.txt
+*.cache
+
+# ---- editors / OS ------------------------------------------------------------
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
